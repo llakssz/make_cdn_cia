@@ -3,11 +3,11 @@
 
 ### Usage ###
 
-Usage: make_cdn_cia CDN_Content_Dir output_CIA_file
+Usage: make_cdn_cia CDN_Content_Dir Output_CIA_File
 
 CDN_Content_Dir - This is the directory where CDN content for the title for generating a CIA, is located. Do not modify any of the files, they must be raw.
 
-output_CIA_file - The name of the output CIA file.
+Output_CIA_File - The name of the output CIA file.
 
 Example:
 
