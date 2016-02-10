@@ -35,7 +35,7 @@ http://nus.cdn.c.shop.nintendowifi.net/ccs/download/<Title_ID>/<Content_ID>
 ### Change Log ###
 
 Version 1.1:
-Unspecified improvements by 173210.
+* Unspecified improvements by 173210.
 
 Version 1.0:
 * Initial Public release
