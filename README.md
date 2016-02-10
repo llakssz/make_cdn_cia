@@ -1,5 +1,5 @@
 #### CTR_Toolkit - make_cdn_cia - Generates CIA files from CDN Content ####
-#### Version: 1.1 2013 (C) 3DSGuy, updated in 2015 by 173210 ####
+#### Version: 1.1 by 3DSGuy and 173210 ####
 
 ### Usage ###
 
