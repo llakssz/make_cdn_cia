@@ -34,9 +34,9 @@ typedef enum
 typedef enum
 {
 	ARGC_FAIL = 1,
-	ARGV_FAIL,
-	IO_FAIL,
-	FILE_PROCESS_FAIL
+	ARGV_FAIL = 2,
+	IO_FAIL = 4,
+	FILE_PROCESS_FAIL = 8
 } errors;
 
 typedef enum

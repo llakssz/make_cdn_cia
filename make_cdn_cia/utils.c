@@ -88,11 +88,11 @@ void resolve_flag(unsigned char flag, unsigned char *flag_bool)
 	unsigned char bit_mask[8] = {0x80,0x40,0x20,0x10,0x8,0x4,0x2,0x1};
 	for(int i = 0; i < 8; i++){
 		if (flag >= bit_mask[i]){
-			flag_bool[7-i] = True;
+			flag_bool[7-i] = TRUE;
 			flag -= bit_mask[i];
 		}
 		else
-			flag_bool[7-i] = False;
+			flag_bool[7-i] = FALSE;
 	}
 }
 
@@ -101,11 +101,11 @@ void resolve_flag_u16(u16 flag, unsigned char *flag_bool)
 	u16 bit_mask[16] = {0x8000,0x4000,0x2000,0x1000,0x800,0x400,0x200,0x100,0x80,0x40,0x20,0x10,0x8,0x4,0x2,0x1};
 	for(int i = 0; i < 16; i++){
 		if (flag >= bit_mask[i]){
-			flag_bool[15-i] = True;
+			flag_bool[15-i] = TRUE;
 			flag -= bit_mask[i];
 		}
 	else
-		flag_bool[15-i] = False;
+		flag_bool[15-i] = FALSE;
 	}
 }
 

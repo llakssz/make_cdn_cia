@@ -21,7 +21,7 @@ along with make_cdn_cia.  If not, see <http://www.gnu.org/licenses/>.
 
 //Version
 #define MAJOR 1
-#define MINOR 00
+#define MINOR 01
 
 void app_title(void);
 void help(u8 *app_name);
@@ -29,29 +29,29 @@ void help(u8 *app_name);
 int main(int argc, char *argv[])
 {
 	app_title();
-	
+
 	//Argument Checks
 	if(argc < 3){
 		printf("[!] Not Enough Arguments\n");
 		help(argv[0]);
-		return 1;
+		return ARGC_FAIL;
 	}
 	if(argc > 3){
 		printf("[!] Too Many Arguments\n");
 		help(argv[0]);
-		return 1;
+		return ARGC_FAIL;
 	}
-	
+
 	//Storing Current Working Directory
 	char cwd[1024];
 	if (getcwdir(cwd, sizeof(cwd)) == NULL){
 		printf("[!] Could not store Current Working Directory\n");
 		return IO_FAIL;
 	}
-	
+
 	//Changing to CDN Content Directory
 	chdir(argv[1]);
-	
+
 	//Processing TIK
 	FILE *tik = fopen("cetk","rb");
 	if(tik == NULL){
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		return IO_FAIL;
 	}
 	TIK_CONTEXT tik_context = process_tik(tik);
-	
+
 	//Processing TMD
 	FILE *tmd = fopen("tmd","rb");
 	if(tmd == NULL){
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 		return IO_FAIL;
 	}
 	TMD_CONTEXT tmd_context = process_tmd(tmd);
-	
+
 	//Error Checking
 	if(tik_context.result != 0 || tmd_context.result != 0){
 		printf("[!] Input files could not be processed successfully\n");
@@ -89,17 +89,17 @@ int main(int argc, char *argv[])
 		printf("[!] CETK Title Ver: %d\n",tik_context.title_version);
 		printf("[!] TMD Title Ver:  %d\n",tmd_context.title_version);
 	}
-	
+
 	//Returning to Original Working Directory
 	chdir(cwd);
-	
+
 	//Opening Output file
 	FILE *output = fopen(argv[2],"wb");
 	if(output == NULL){
 		printf("[!] Could not create '%s'\n",argv[2]);
 		return IO_FAIL;
 	}
-	
+
 	int result = generate_cia(tmd_context,tik_context,output);
 	if(result != 0){
 		printf("[!] Failed to Generate %s\n",argv[2]);
