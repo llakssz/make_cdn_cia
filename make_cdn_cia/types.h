@@ -21,8 +21,8 @@ along with make_cdn_cia.  If not, see <http://www.gnu.org/licenses/>.
 //Bools
 typedef enum
 {
-	False,
-	True
+	FALSE,
+	TRUE
 } _boolean;
 
 typedef enum
