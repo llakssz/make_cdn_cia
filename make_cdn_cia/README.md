@@ -1,13 +1,7 @@
-CTR_Toolkit - make_cdn_cia - Generates CIA files from CDN Content
-Version: 1.0 2013 (C) 3DSGuy
+#### CTR_Toolkit - make_cdn_cia - Generates CIA files from CDN Content ####
+#### Version: 1.0 2013 (C) 3DSGuy ####
 
-/******** Change Log ********/
-
-Version 1.0:
-* Initial Public release
-* Supports generating valid CIA files from Title Content on Nintendo's CDN
-
-/******** Usage: ********/
+### Usage ###
 
 Usage: make_cdn_cia <CDN Content Dir> <output CIA file>
 
@@ -17,9 +11,9 @@ Usage: make_cdn_cia <CDN Content Dir> <output CIA file>
 
 Examples:
 
-make_cdn_cia 0004001000021400 Nintendo_3DS_Sound.CIA
+make_cdn_cia 0004001000021400 Nintendo_3DS_Sound.cia
 
-/******** Creating Input Files ********/
+### Creating Input Files ###
 
 1/ See the 3DS Title List here: http://www.3dbrew.org/wiki/Title_list
 
@@ -38,3 +32,8 @@ http://nus.cdn.c.shop.nintendowifi.net/ccs/download/<Title_ID>/<Content_ID>
 
 6/ Done, the input is now ready for use with make_cdn_cia.
 
+### Change Log ###
+
+Version 1.0:
+* Initial Public release
+* Supports generating valid CIA files from Title Content on Nintendo's CDN
