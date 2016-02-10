@@ -1,15 +1,15 @@
 #### CTR_Toolkit - make_cdn_cia - Generates CIA files from CDN Content ####
-#### Version: 1.0 2013 (C) 3DSGuy ####
+#### Version: 1.1 2013 (C) 3DSGuy, updated in 2015 by 173210 ####
 
 ### Usage ###
 
-Usage: make_cdn_cia <CDN Content Dir> <output CIA file>
+Usage: make_cdn_cia CDN_Content_Dir output_CIA_file
 
-<CDN Content Dir> - This is the directory where CDN content for the title for generating a CIA, is located. Do not modify any of the files, they must be raw.
+CDN_Content_Dir - This is the directory where CDN content for the title for generating a CIA, is located. Do not modify any of the files, they must be raw.
 
-<output CIA file> - The name of the output CIA file.
+output_CIA_file - The name of the output CIA file.
 
-Examples:
+Example:
 
 make_cdn_cia 0004001000021400 Nintendo_3DS_Sound.cia
 
@@ -33,6 +33,9 @@ http://nus.cdn.c.shop.nintendowifi.net/ccs/download/<Title_ID>/<Content_ID>
 6/ Done, the input is now ready for use with make_cdn_cia.
 
 ### Change Log ###
+
+Version 1.1:
+Unspecified improvements by 173210.
 
 Version 1.0:
 * Initial Public release
