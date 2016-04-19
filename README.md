@@ -1,3 +1,7 @@
+**From what I remember, this code was completely rewritten, not just by 173210. The original repo was deleted so I'm not sure who to credit... sorry.**
+
+**Because of the rewrite, I would call this a Version 2.0 - if this code really is the latest code from the original repo.**
+
 #### CTR_Toolkit - make_cdn_cia - Generates CIA files from CDN Content ####
 #### Version: 1.1 by 3DSGuy and 173210 ####
 
